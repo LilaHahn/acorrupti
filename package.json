@@ -1,0 +1,70 @@
+{
+  "name": "acorrupti",
+  "version": "1.0.0",
+  "description": "Typescript loaders for swc",
+  "keywords": [
+    "typescript",
+    "deleniti",
+    "quos",
+    "iste"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LilaHahn/acorrupti.git"
+  },
+  "license": "MIT",
+  "author": "VitoCremin",
+  "exports": {
+    ".": {
+      "import": "./lib/esm/index.mjs",
+      "require": "./lib/cjs/index.js"
+    },
+    "./*": "./*"
+  },
+  "type": "commonjs",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.mjs",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "",
+    "format": "biome check --apply-unsafe lib/ test/",
+    "prepublishOnly": "npm run format && depcheck",
+    "test": "tsds link && mocha-compat test/**/*.test.js --no-timeouts && tsds unlink",
+    "test:engines": "nvu engines npm test"
+  },
+  "dependencies": {
+    "@swc/core": "^1.4.0",
+    "core-js": "^3.35.1",
+    "get-tsconfig-compat": "^0.0.1",
+    "micromatch": "^3.1.10",
+    "mkdirp": "^0.5.6",
+    "node-version-call": "^0.4.7",
+    "os-shim": "^0.1.3",
+    "path-posix": "^1.0.0",
+    "pirates": "^2.1.2",
+    "regenerator-runtime": "^0.13.9",
+    "short-hash": "^1.0.0",
+    "slash": "^1.0.0",
+    "ts-node": "10.8.2",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.5.3",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.11.17",
+    "cross-spawn-cb": "^0.6.15",
+    "depcheck": "^1.4.7",
+    "mocha": "^10.3.0",
+    "mocha-compat": "^3.5.5",
+    "react": "^18.2.0",
+    "ts-dev-stack": "^0.9.4"
+  },
+  "engines": {
+    "node": ">=0.8"
+  },
+  "bugs": {
+    "url": "https://github.com/LilaHahn/acorrupti.git/issues"
+  }
+}
